@@ -25,3 +25,6 @@ pull request -> suppose you are working on a features, definitely it should be o
 one pull request can contains many commit in that branch.
 
 That's why if we are working over 10 features, then we create 10 branch, and commits are done separately to these branches.
+
+we can also remove commits if some extra or redundants have been made.
+git reset {just nich wale ka logs erase kr do} and then push forcely (git push -f origin features)
