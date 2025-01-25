@@ -1,0 +1,23 @@
+git init -> to initialize the git repository for that directory, that has hidden file and folders that maintains all the changes and version of the folder.
+
+git status -> to check the status of the folder, whethere there are some untracked files present or not.
+
+git add {filename} -> to track the file. i.e. now this file is not more untracked.
+
+git add . -> to track all the changs made.
+
+git commit -m "give some message here " -> to commit/permanent all the changes.
+
+git restore --staged {filename} -> to track back to the previous file removing the saving of it.
+ 
+git log -> to check all the history/commit made by us.
+
+commit made by git is based on one above other, thus you can't delete commit of the mid.
+you can remove it by:
+
+git reset {jo remove krna chah rhe hai usse just previous commit ko write kr do} 
+
+git stash -> if we don't want to commit but also don't want to lose the change, so it saves it
+git stash pop -> to get back to our work.
+git stash clear -> for permanent remove that part i.e. deleting the stash 
+
