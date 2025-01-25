@@ -21,3 +21,7 @@ git stash -> if we don't want to commit but also don't want to lose the change, 
 git stash pop -> to get back to our work.
 git stash clear -> for permanent remove that part i.e. deleting the stash 
 
+pull request -> suppose you are working on a features, definitely it should be on new branch, you have to create pull request for it to merge it to main branch. 
+one pull request can contains many commit in that branch.
+
+That's why if we are working over 10 features, then we create 10 branch, and commits are done separately to these branches.
