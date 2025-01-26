@@ -81,16 +81,55 @@ Commits in Git are like a stack, built one on top of the other. You can’t dire
 
 ---
 
-## Branching and Pull Requests
+## Branching and Merging
 
-### 1. **Pull Request**
+### 1. **Create and Switch to a New Branch**
+- **Command**: `git checkout -b {branch}`
+- **Purpose**: Creates a new branch and switches to it.
+
+---
+
+### 2. **Merge Branches**
+- **Command**: `git merge {branch}`
+- **Purpose**: Merges the specified branch into the current branch. This integrates changes from one branch into another.
+
+- **Types of Merge**:
+  - **Fast-forward Merge**: Applied when the current branch is directly ahead of the branch being merged.
+  - **Three-way Merge**: Combines changes from two branches with a common base, creating a new merge commit.
+
+---
+
+### 3. **Rebase a Branch**
+- **Command**: `git rebase {branch}`
+- **Purpose**: Reapplies commits from the current branch on top of the specified branch, creating a linear history.
+
+---
+
+### 4. **Why Use Rebase vs Merge?**
+- **Rebase**:
+  - Creates a clean, linear commit history.
+  - Use when you want to "replay" your changes on top of another branch.
+  - Avoid rebasing shared branches to prevent conflicts.
+- **Merge**:
+  - Maintains the true history of all changes.
+  - Use for preserving a complete record of development.
+
+---
+
+## Pull Requests
+
+### 1. **Pull Request Overview**
 - **Purpose**: Used to merge a feature branch into the main branch.
 - A pull request can contain multiple commits and is essential for collaborative development.
+
+---
 
 ### 2. **Working on Features**
 - Create a new branch for each feature:
   - **Command**: `git checkout -b {feature-branch}`
   - Commit changes separately in this branch.
+
+---
 
 ### 3. **Why Use Branches?**
 - Enables isolated development for multiple features.
@@ -113,6 +152,8 @@ Commits in Git are like a stack, built one on top of the other. You can’t dire
 | `git stash pop`                  | Restore stashed changes                                        |
 | `git stash clear`                | Permanently delete all stashed changes                         |
 | `git checkout -b {branch}`        | Create and switch to a new branch                              |
+| `git merge {branch}`             | Merge a branch into the current branch                         |
+| `git rebase {branch}`            | Reapply commits on top of another branch                       |
 | `git pull`                       | Fetch and merge changes from a remote repository               |
 | `git push`                       | Push local changes to a remote repository                      |
 | `git remote add upstream {URL}`   | Add a remote repository named "upstream"                     |
